@@ -15,26 +15,301 @@
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
+      color: var(--black);
       font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
     }
     h1, h2, h3 {
       font-family: 'Poppins', sans-serif;
     }
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 0;
+
+    /* NAVIGATION BAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background: var(--white);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    header {
-      text-align: center;
-      padding: 3rem 0 1rem;
+    .nav-logo {
+      width: 150px;
+      height: auto;
+    }
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .nav-menu.active {
+      display: flex;
+    }
+    .nav-item {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+    .nav-item a {
+      text-decoration: none;
+      color: var(--black);
+      transition: color 0.3s;
+    }
+    .nav-item a:hover {
+      color: var(--green);
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
       background: var(--black);
+      margin: 3px;
     }
-    header img {
+
+    /* HERO SECTION */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf3fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: var(--white);
+      text-align: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 2rem;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      margin: 0.5rem;
+      transition: opacity 0.3s;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--green);
+      color: var(--green);
+    }
+    .btn-solid {
+      background: var(--green);
+      color: var(--black);
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* SERVICES GRID */
+    .services-section {
+      padding: 4rem 5%;
+      background: var(--white);
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: var(--green);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .service-content {
+      padding: 1.5rem;
+    }
+    .service-content h3 {
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+    .service-content p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+    }
+    .learn-more {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .learn-more::after {
+      content: "→";
+      margin-left: 0.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: #888;
+      border-top: 1px solid #ddd;
+      margin-top: 3rem;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 1rem 2%;
+      }
+      .nav-logo {
+        width: 120px;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-menu {
+        display: none;
+      }
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .services-section {
+        padding: 2rem 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <img src="logo.png" alt="Zero Harm Studio" class="nav-logo">
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <div class="nav-item"><a href="#hero">Home</a></div>
+      <div class="nav-item"><a href="#services">Services</a></div>
+      <div class="nav-item"><a href="#contact">Contact</a></div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Visualizing Safety.<br>Closing the Loop.</h1>
+      <p>We turn near-misses into verified, trackable safety lessons for every worker — no matter their shift or literacy level.</p>
+      <a href="#services" class="btn btn-outline">See How It Works</a>
+      <a href="#contact" class="btn btn-solid">Request a Demo</a>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="services-section" id="services">
+    <h2 class="section-title">Our Safety Solutions</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf3fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Industrial Accident Reconstruction" class="service-img">
+        <div class="service-content">
+          <h3>Industrial Accident Reconstruction</h3>
+          <p>Forensic 3D models for investigations and legal clarity — turning chaos into understanding.</p>
+          <a href="#" class="learn-more">Learn more</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf3fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="3D Safety Training Videos" class="service-img">
+        <div class="service-content">
+          <h3>3D Safety Training Videos</h3>
+          <p>Engaging simulations for high-risk teams — designed to stick in memory, not just eyes.</p>
+          <a href="#" class="learn-more">Learn more</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf3fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Near-Miss Visualization" class="service-img">
+        <div class="service-content">
+          <h3>Near-Miss Case Visualization</h3>
+          <p>Turn close calls into powerful learning tools — before they become tragedies.</p>
+          <a href="#" class="learn-more">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" style="padding: 3rem 5%; text-align: center; background: var(--white);">
+    <h2 style="color: var(--green); margin-bottom: 1.5rem;">Get in Touch</h2>
+    <p>Email: <a href="mailto:contact@zeroharmstudio.com" style="color:var(--green);">contact@zeroharmstudio.com</a></p>
+    <p>Or WhatsApp: +91 XXXXX XXXXX</p>
+    <p style="margin-top: 1.2rem;">
+      <a href="https://tally.so/r/your-form-link" class="btn btn-solid">Send Us a Message</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Zero Harm Studio. Built for Mining, Construction & Heavy Industries.</p>
+    <p>Serving India | Remote Team | Safety First, Always</p>
+  </footer>
+
+  <!-- JAVASCRIPT FOR MOBILE MENU -->
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>    header img {
       width: 100%;
       max-width: 250px;
       height: auto;
