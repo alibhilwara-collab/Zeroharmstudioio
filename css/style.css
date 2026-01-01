@@ -47,7 +47,13 @@ a {
   height: 60px;
   width: auto;
 }
-
+/* Optional: Agar aap sabhi images ko 50% width dena chahte hain */
+img.responsive-image {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center-align (optional) */
+}
 /* Header */
 .header {
   background: var(--white);
