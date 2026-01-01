@@ -171,11 +171,11 @@ img.responsive-image {
   }
 /* Images ko 50% size + centered */
 .step-icon {
-  width: 50%;
+  width: 20%;
   height: auto;
   display: block;
   margin: 1rem auto 0;
-  max-width: 200px;
+  max-width: 100px;
   border-radius: 8px;
   background: white;
   padding: 8px;
