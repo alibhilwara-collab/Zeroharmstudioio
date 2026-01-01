@@ -130,22 +130,31 @@ a {
   background: var(--light);
 }
 
-/* Steps – How It Works */
+/* ✅ Updated: 2 steps per row, responsive */
 .steps {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 2rem; /* Space between boxes */
   margin-top: 2rem;
 }
+
 .step {
   background: var(--white);
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  width: 220px;
+  width: 45%; /* 👈 2 per row */
   text-align: center;
   position: relative;
+}
+
+/* Mobile par 1 per row */
+@media (max-width: 768px) {
+  .step {
+    width: 90%; /* Full width on mobile */
+    padding: 1.5rem 1rem;
+  }
 }
 .step-number {
   width: 40px;
