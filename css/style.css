@@ -146,17 +146,19 @@ a {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   width: 45%;
   text-align: center;
-  transition: transform 0.2s ease;
+  position: relative;
+  min-height: 280px; /* Optional: uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-/* Mobile par 1 per row */
+/* Mobile par */
 @media (max-width: 768px) {
   .step {
-    width: 90%; /* Full width on mobile */
+    width: 90%;
+    min-height: auto;
     padding: 1.5rem 1rem;
   }
 }
