@@ -144,11 +144,15 @@ a {
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  width: 45%; /* 👈 2 per row */
+  width: 45%;
   text-align: center;
-  position: relative;
+  transition: transform 0.2s ease;
 }
 
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
 /* Mobile par 1 per row */
 @media (max-width: 768px) {
   .step {
@@ -180,16 +184,15 @@ a {
   line-height: 1.4;
 }
 
-/* ✅ Step Icon – PNG Below Each Step */
 .step-icon {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: auto;
   display: block;
   margin: 1rem auto 0;
   border-radius: 8px;
   background: white;
-  padding: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Dashboard */
