@@ -47,6 +47,7 @@ a {
   height: 60px;
   width: auto;
 }
+
 /* Optional: Agar aap sabhi images ko 50% width dena chahte hain */
 img.responsive-image {
   width: 50%;
@@ -54,6 +55,7 @@ img.responsive-image {
   display: block;
   margin: 0 auto; /* center-align (optional) */
 }
+
 /* Header */
 .header {
   background: var(--white);
@@ -167,7 +169,12 @@ img.responsive-image {
     min-height: auto;
     padding: 1.5rem 1rem;
   }
+  .step-icon {
+    width: 60px;
+    height: auto;
+  }
 }
+
 .step-number {
   width: 40px;
   height: 40px;
@@ -191,15 +198,18 @@ img.responsive-image {
   margin-bottom: 1rem;
   line-height: 1.4;
 }
+
+/* 👇 YAHAN PE MAIN CHANGE KIYA GAYA HAI 👇 */
 .step-icon {
-  width: 100%;           /* Card ke width ke barabar */
-  height: auto;          /* Proportional */
+  width: 50%;
+  height: auto;
   display: block;
   margin: 1rem auto 0;
   border-radius: 8px;
   background: white;
   padding: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
 }
 
 /* Dashboard */
@@ -300,9 +310,5 @@ img.responsive-image {
   .step {
     width: 160px;
     padding: 1.5rem 1rem;
-  }
-  .step-icon {
-    width: 50px;
-    height: 50px;
   }
 }
