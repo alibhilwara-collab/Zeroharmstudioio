@@ -185,13 +185,11 @@ a {
   margin-bottom: 1rem;
   line-height: 1.4;
 }
-
 .step-icon {
-  width: 100%;           /* Image card ke width ke barabar */
-  max-width: 120px;      /* Max size — agar image badi hai toh scale down */
-  height: auto;          /* Aspect ratio maintain */
+  width: 100%;           /* Card ke width ke barabar */
+  height: auto;          /* Proportional */
   display: block;
-  margin: 1rem auto 0;   /* Center horizontally */
+  margin: 1rem auto 0;
   border-radius: 8px;
   background: white;
   padding: 8px;
