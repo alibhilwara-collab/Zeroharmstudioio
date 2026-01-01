@@ -169,10 +169,22 @@ img.responsive-image {
     min-height: auto;
     padding: 1.5rem 1rem;
   }
-  .step-icon {
-    width: 60px;
-    height: auto;
-  }
+/* Images ko 50% size + centered */
+.step-icon {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 1rem auto 0;
+  max-width: 200px;
+  border-radius: 8px;
+  background: white;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sab content (including h2) center-aligned */
+.step-content {
+  text-align: center;
 }
 
 .step-number {
