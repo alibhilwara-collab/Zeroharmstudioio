@@ -110,7 +110,7 @@ a {
 /* Steps Grid */
 .steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
   margin-top: 2.5rem;
 }
@@ -120,28 +120,28 @@ a {
   padding: 1.5rem;
 }
 
-/* ✅ UPDATED: +40% IMAGE SIZE */
+/* ✅ DOUBLE SIZE IMAGES */
 .step-icon {
   width: 100%;
   height: auto;
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 1.4rem;
   display: block;
-  max-width: 700px;          /* ← 500px + 40% = 700px */
+  max-width: 500px;          /* ← EXACTLY DOUBLE of original 250px */
   border-radius: 8px;
   background: white;
-  padding: 14px;             /* Slightly increased for balance */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18); /* Slightly stronger */
+  padding: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
 }
 
 .step h3 {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   color: var(--primary);
   margin-bottom: 0.8rem;
 }
 .step p {
-  font-size: 1rem;
+  font-size: 1.02rem;
   color: var(--gray);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* Dashboard */
@@ -221,11 +221,11 @@ a {
     font-size: 1rem;
   }
   .step-icon {
-    width: 95%;            /* Almost full width */
-    max-width: 450px;      /* 320px + 40% ≈ 450px */
-    padding: 12px;
+    width: 90%;
+    max-width: 360px;      /* Mobile: 180px → 360px (double) */
+    padding: 10px;
   }
   .steps {
-    gap: 1.8rem;
+    gap: 2rem;
   }
 }
