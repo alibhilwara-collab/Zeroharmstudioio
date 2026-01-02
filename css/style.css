@@ -107,10 +107,10 @@ a {
   background: var(--light);
 }
 
-/* ✅ 2x2 GRID FOR 4 IMAGES */
+/* Steps Grid — 2x2 Layout */
 .steps {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
   margin-top: 2.5rem;
 }
@@ -118,14 +118,19 @@ a {
 .step {
   text-align: center;
   padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
+/* ✅ FIXED IMAGE SIZE — ALL IMAGES SAME HEIGHT & WIDTH */
 .step-icon {
   width: 100%;
-  height: auto;
+  height: 250px;          /* ← Fixed height for all images */
+  object-fit: cover;       /* Crop to fit, maintain aspect ratio */
+  object-position: center;
   margin: 0 auto 1.3rem;
   display: block;
-  max-width: 500px;
   border-radius: 8px;
   background: white;
   padding: 12px;
@@ -220,10 +225,10 @@ a {
     font-size: 1rem;
   }
   .steps {
-    grid-template-columns: 1fr; /* Mobile: 1 column */
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
   .step-icon {
-    max-width: 360px;
+    height: 200px;        /* Mobile: slightly smaller */
   }
 }
