@@ -143,23 +143,21 @@ a {
   margin-bottom: 0.8rem;
 }
 
-/* ✅ DESCRIPTION TEXT — BIGGER + CENTERED */
 .step p {
-  font-size: 1.05rem;     /* ← Slightly bigger than before */
+  font-size: 1.05rem;
   color: var(--gray);
   line-height: 1.6;
-  text-align: center;      /* ← Center align */
+  text-align: center;
 }
 
-/* Dashboard */
-.dashboard-placeholder {
-  background: #eef2f7;
-  padding: 3rem;
-  border-radius: var(--radius);
-  text-align: center;
-  margin-top: 1.5rem;
-  font-style: italic;
+/* Dashboard Section — Center Align Description */
+.section.bg-light p {
+  font-size: 1.1rem;      /* ← Slightly bigger than default */
   color: var(--gray);
+  line-height: 1.7;
+  text-align: center;      /* ← Center align */
+  margin: 1.2rem auto;     /* Optional: add margin for spacing */
+  max-width: 800px;        /* Optional: prevent too wide on large screens */
 }
 
 /* Values */
@@ -235,6 +233,10 @@ a {
     height: 200px;
   }
   .step p {
-    font-size: 1rem;       /* Mobile: slightly smaller */
+    font-size: 1rem;
+  }
+  .section.bg-light p {
+    font-size: 1rem;
+    max-width: 100%;
   }
 }
