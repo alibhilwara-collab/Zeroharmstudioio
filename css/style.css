@@ -120,17 +120,17 @@ a {
   padding: 1.5rem;
 }
 
-/* ✅ UPDATED: DOUBLE SIZE IMAGES */
+/* ✅ UPDATED: +40% IMAGE SIZE */
 .step-icon {
-  width: 100%;               /* ← was 50%, now 100% = double */
+  width: 100%;
   height: auto;
   margin: 0 auto 1.2rem;
   display: block;
-  max-width: 500px;          /* ← was 250px, now 500px = double */
+  max-width: 700px;          /* ← 500px + 40% = 700px */
   border-radius: 8px;
   background: white;
-  padding: 12px;             /* slightly increased padding */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); /* slightly stronger shadow */
+  padding: 14px;             /* Slightly increased for balance */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18); /* Slightly stronger */
 }
 
 .step h3 {
@@ -221,9 +221,9 @@ a {
     font-size: 1rem;
   }
   .step-icon {
-    width: 90%;            /* Mobile: slightly less than full */
-    max-width: 320px;      /* Prevent too large on small screens */
-    padding: 10px;
+    width: 95%;            /* Almost full width */
+    max-width: 450px;      /* 320px + 40% ≈ 450px */
+    padding: 12px;
   }
   .steps {
     gap: 1.8rem;
