@@ -120,28 +120,28 @@ a {
   padding: 1.5rem;
 }
 
-/* ✅ DOUBLE SIZE IMAGES */
+/* ✅ DOUBLE IMAGE SIZE */
 .step-icon {
   width: 100%;
   height: auto;
-  margin: 0 auto 1.4rem;
+  margin: 0 auto 1.3rem;
   display: block;
-  max-width: 500px;          /* ← EXACTLY DOUBLE of original 250px */
+  max-width: 500px;          /* ← EXACT DOUBLE of original 250px */
   border-radius: 8px;
   background: white;
   padding: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 .step h3 {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: var(--primary);
   margin-bottom: 0.8rem;
 }
 .step p {
-  font-size: 1.02rem;
+  font-size: 1rem;
   color: var(--gray);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 /* Dashboard */
@@ -222,10 +222,9 @@ a {
   }
   .step-icon {
     width: 90%;
-    max-width: 360px;      /* Mobile: 180px → 360px (double) */
-    padding: 10px;
+    max-width: 360px;      /* Mobile: double of ~180px */
   }
   .steps {
     gap: 2rem;
   }
-}
+  }
