@@ -150,14 +150,26 @@ a {
   text-align: center;
 }
 
-/* Dashboard Section — Center Align Description */
+/* Dashboard Section — Center Align Description & Admin Text */
 .section.bg-light p {
-  font-size: 1.1rem;      /* ← Slightly bigger than default */
+  font-size: 1.1rem;
   color: var(--gray);
   line-height: 1.7;
-  text-align: center;      /* ← Center align */
-  margin: 1.2rem auto;     /* Optional: add margin for spacing */
-  max-width: 800px;        /* Optional: prevent too wide on large screens */
+  text-align: center;
+  margin: 1.2rem auto;
+  max-width: 800px;
+}
+
+.dashboard-placeholder {
+  background: #eef2f7;
+  padding: 3rem;
+  border-radius: var(--radius);
+  text-align: center;        /* ← Center align the placeholder text */
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--gray);
+  font-size: 1.05rem;       /* ← Slightly bigger than before */
+  line-height: 1.6;
 }
 
 /* Values */
@@ -238,5 +250,9 @@ a {
   .section.bg-light p {
     font-size: 1rem;
     max-width: 100%;
+  }
+  .dashboard-placeholder {
+    font-size: 1rem;
+    padding: 2rem;
   }
 }
