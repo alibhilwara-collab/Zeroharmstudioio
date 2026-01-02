@@ -21,7 +21,17 @@ body {
   line-height: 1.6;
   background: var(--white);
 }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Body white by default */
+}
 
+main {
+  background-color: #000000; /* ya aapka dark theme color */
+  color: #ffffff;
+  padding: 2rem 0;
+}
 .container {
   width: 90%;
   max-width: 1200px;
