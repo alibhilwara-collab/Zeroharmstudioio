@@ -164,11 +164,11 @@ a {
   background: #eef2f7;
   padding: 3rem;
   border-radius: var(--radius);
-  text-align: center;        /* ← Center align the placeholder text */
+  text-align: center;
   margin-top: 1.5rem;
   font-style: italic;
   color: var(--gray);
-  font-size: 1.05rem;       /* ← Slightly bigger than before */
+  font-size: 1.05rem;
   line-height: 1.6;
 }
 
@@ -190,8 +190,13 @@ a {
   padding: 2rem 0;
   background: var(--light);
 }
+
+/* ✅ CONTACT DETAILS — BIGGER + BOLD + CENTERED */
 .contact-info p {
   margin: 0.4rem 0;
+  font-size: 1.1rem;       /* ← Increased from 0.9rem */
+  font-weight: 600;        /* ← Bold */
+  color: var(--dark);       /* ← Dark for contrast */
 }
 
 /* Footer */
@@ -254,5 +259,9 @@ a {
   .dashboard-placeholder {
     font-size: 1rem;
     padding: 2rem;
+  }
+  .contact-info p {
+    font-size: 1rem;        /* Mobile: slightly smaller */
+    font-weight: 600;
   }
 }
