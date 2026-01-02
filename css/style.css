@@ -33,7 +33,17 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+/* Ensure the header has a white background and is visible */
+.header {
+  background-color: #ffffff !important;
+  color: #000000; /* Ensure text is readable */
+  padding: 1rem 0; /* Optional: spacing */
+  margin: 0;
+  z-index: 1000;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
 /* Header */
 .site-header {
   background-color: #002B5B;
